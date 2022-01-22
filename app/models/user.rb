@@ -7,6 +7,12 @@ class User < ApplicationRecord
   has_many :books, dependent: :destroy
   has_many :post_comments, dependent: :destroy
   has_many :favorites, dependent: :destroy
+  
+  has_many :relationships, class_name: "Relationship", foreign_key: "follower_id", dependent: :destroy
+  has_many :reverse_relationships, class_name: "Relationship", foreign_key: "followed_id", dependent: :destroy
+  has_many :followings, through: :relationships, source: :followed
+  has_many :followers, through: :reverse_relationships, source: :follower
+  
 
   has_one_attached :profile_image
 
@@ -18,13 +24,3 @@ class User < ApplicationRecord
     (profile_image.attached?) ? profile_image : 'no_image.jpg'
   end
 end
-
-
-  # def get_profile_image(size)
-  #   unless profile_image.attached?
-  #     file_path = Rails.root.join('app/assets/images/no_image.jpg')
-  #     profile_image.attach(io: File.open(file_path), filename: 'default-image.jpg', content_type: 'image/jpeg')
-  #   end
-  #   profile_image.variant(resize: size)
-  #   # .processed
-  # end
