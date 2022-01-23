@@ -20,7 +20,9 @@
   </tr>
 </table>
 <div class="row">
-  <p>follow button</p>
+  <% if user != current_user %>
+    <%= render 'relationships/follow_button', user: user%>
+  <% end %>
 </div>
 
 <div class='row'>
