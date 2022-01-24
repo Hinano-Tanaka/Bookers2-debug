@@ -1,5 +1,12 @@
 class SearchesController < ApplicationController
   def search
-    redirect_to 
+    @model = params[:model]
+    @content = params[:content]
+    @method = params[:method]
+    if @model = User
+      @users = User.search_for(@content,@method)
+    else
+      @books = Book.search_for(@content,@method)
+    end
   end
 end
