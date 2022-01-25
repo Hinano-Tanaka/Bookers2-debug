@@ -24,7 +24,7 @@
             <% end %>
           </li>
           <li>
-            <%= link_to destroy_user_session_path, method: :delete, class: 'nav-link text-light' do %>
+            <%= button_to destroy_user_session_path, method: :delete, class: 'nav-link text-light' do %>
               <i class="fas fa-sign-out-alt"></i> logout
             <% end %>
           </li>
@@ -54,9 +54,9 @@
       </div>
     </div>
   </nav>
-  <div>
+  <div class="row">
     <% if user_signed_in? %>
-      <%= render 'searches/search' %>
+      <%= render 'searches/searchbar' %>
     <% end %>
   </div>
 </header>
