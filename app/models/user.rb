@@ -37,7 +37,7 @@ class User < ApplicationRecord
     followings.include?(user)
   end
 # -----------------------------------
-  
+
   def self.search_for(content, method)
     if method == 'perfect'
       User.where(name: content)

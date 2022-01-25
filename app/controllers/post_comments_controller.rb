@@ -6,12 +6,12 @@ class PostCommentsController < ApplicationController
     comment.user_id = current_user.id
     comment.book_id = book.id
     comment.save
-    redirect_to book_path(book)
+    # redirect_to book_path(book)
   end
 
   def destroy
     PostComment.find(params[:id]).destroy
-    redirect_to book_path(params[:book_id])
+    # redirect_to book_path(params[:book_id])
   end
 
   private

@@ -1,4 +1,3 @@
-
 <table class='table table-hover table-inverse'>
   <thead>
     <tr>
@@ -18,34 +17,12 @@
         </td>
         <td><%= link_to book.title,book, class: "book_#{book.id}" %></td>
         <td><%= book.body %></td>
-        <!----------------------------------->
-        <td>
-          <% if book.favorited_by?(current_user) %>
-            <p>
-              <%= button_to book_favorites_path(book), method: :delete do %>
-                ♥<%= book.favorites.count %>
-              <% end %>
-            </p>
-            <% else %>
-            <p>
-              <%= button_to book_favorites_path(book), method: :post do %>
-                ♡<%= book.favorites.count %>
-              <% end %>
-            </p>
-          <% end %>
+        <td class="favorite-btn" id="favorite_btn_<%= @book.id %>">
+          <%= render "favorites/btn", book: book %>
         </td>
-
-        <!------------------------------------>
         <td>
           <p>コメント数：<%= book.post_comments.count %></p>
-          <% book.post_comments.each do |post_comment| %>
-            <!--<p>-->
-              <!--%= image_tag post_comment.user.get_profile_image("100x100") %-->
-            <!--</p>-->
-            <!--%= post_comment.user.name %-->
-          <% end %>
         </td>
-
       </tr>
     <% end %>
   </tbody>
