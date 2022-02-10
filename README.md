@@ -1,24 +1,31 @@
-# README
+---
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Bookers2-Debug
 
-Things you may want to cover:
+---
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
 
-* Database creation
+<!--This README would normally document whatever steps are necessary to get the-->
+<!--application up and running.-->
 
-* Database initialization
+<!--Things you may want to cover:-->
 
-* How to run the test suite
+<!--* Ruby version-->
 
-* Services (job queues, cache servers, search engines, etc.)
+<!--* System dependencies-->
 
-* Deployment instructions
+<!--* Configuration-->
 
-* ...
+<!--* Database creation-->
+
+<!--* Database initialization-->
+
+<!--* How to run the test suite-->
+
+<!--* Services (job queues, cache servers, search engines, etc.)-->
+
+<!--* Deployment instructions-->
+
+<!--* ...-->
