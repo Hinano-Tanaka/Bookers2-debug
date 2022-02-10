@@ -4,7 +4,10 @@
 
 ---
 
-
+| model | controller |
+| ----- | ---------- |
+| book  | books.     |
+| user. | users.     |
 
 
 <!--This README would normally document whatever steps are necessary to get the-->
