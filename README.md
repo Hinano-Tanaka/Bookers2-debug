@@ -9,6 +9,12 @@
 | book  | books.     |
 | user. | users.     |
 
+**いいね機能**
+> 引用 
+<p class="info">情報</p>
+<p class="warn">**注意**</p>
+<p class="alert">**警告**</p>
+
 
 <!--This README would normally document whatever steps are necessary to get the-->
 <!--application up and running.-->
