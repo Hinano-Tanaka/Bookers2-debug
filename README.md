@@ -14,10 +14,10 @@
 
 [Google](https://www.google.com/?hl=ja)
 
-'''README.md
+'''ruby:README.md
 how to write code here
 '''
-
+`code`
 
 <!--This README would normally document whatever steps are necessary to get the-->
 <!--application up and running.-->
