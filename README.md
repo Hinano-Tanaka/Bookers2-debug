@@ -14,9 +14,9 @@
 
 [Google](https://www.google.com/?hl=ja)
 
-'''ruby:README.md
-how to write code here
-'''
+```
+how to write code
+```
 `code`
 
 <!--This README would normally document whatever steps are necessary to get the-->
